@@ -8,7 +8,9 @@
 #                                                  markata.dev
 
 [markata.nav]
-# 'markata' = '/'
+'all' = '/all'
+'written' = '/written'
+'video' = '/video'
 # 'GitHub' = 'https://github.com/WaylonWalker/markata'
 # 'docs' = 'https://markata.dev/docs/'
 # 'plugins' = 'https://markata.dev/plugins/'
@@ -19,6 +21,7 @@
 site_version = 1
 hooks = [
     "reader_waylonwalker_com.plugins.reader",
+    "markata.plugins.copy_assets",
     "markata.plugins.base_cli",
     "markata.plugins.post_model",
     "markata.plugins.config_model",
@@ -26,6 +29,7 @@ hooks = [
     "markata.plugins.setup_logging",
     "markata.plugins.datetime",
     "markata.plugins.feeds",
+    "markata.plugins.post_template",
     # "default",
 ]
 # disabled_hooks = [
@@ -52,21 +56,21 @@ hooks = [
 # ]
 #
 ## Site Config
-url = "https://markata.dev"
-title = "Markata's Docs"
-description = "Documentation for using the Markata static site generator"
-rss_description = "Markata docs"
+url = "https://reader.waylonwalker.com"
+title = "Reader"
+description = "My personal rss reader."
+rss_description = "My personal rss reader."
 author_name = "Waylon Walker"
 author_email = "waylon@waylonwalaker.com"
-icon = "favicon.ico"
+icon = "8bitcc.ico"
 lang = "en"
-repo_url = "https://github.com/waylonwalker/markata"
+repo_url = "https://github.com/waylonwalker/reader.waylonwalker.com"
 repo_branch = "main"
 theme_color = "#322D39"
 background_color = "#B73CF6"
 start_url = "/"
-site_name = "Markata"
-short_name = "ww"
+site_name = "Waylon Walker's Reader"
+short_name = "reader"
 display = "minimal-ui"
 twitter_card = "summary_large_image"
 twitter_creator = "@_waylonwalker"
@@ -75,25 +79,63 @@ twitter_site = "@_waylonwalker"
 [[markata.reader]]
 url = 'https://daverupert.com/atom.xml'
 author = 'David Rupert'
+tags = ['written']
 [[markata.reader]]
 url = 'https://joelhooks.com/rss.xml'
 author = 'Joel Hooks'
+tags = ['written']
 [[markata.reader]]
 url = 'https://swyx.io/rss.xml'
 author = 'Swyx'
+tags = ['written']
 [[markata.reader]]
 url = 'https://chriscoyier.net/feed/'
 author = 'Chris Coyier'
+tags = ['written']
 [[markata.reader]]
 url = 'https://mathspp.com/blog.rss'
 author = 'Rodrigo@mathsppblog'
+tags = ['written']
 [[markata.reader]]
 url = 'https://blog.jim-nielsen.com/feed.xml'
 author = 'Jim Nielsen'
+tags = ['written']
 [[markata.reader]]
 url = 'https://www.youtube.com/feeds/videos.xml?channel_id=UCyU5wkjgQYGRB0hIHMwm2Sg'
 author = 'Syntax.fm'
-
+tags = ['video']
+[[markata.reader]]
+url = 'https://www.youtube.com/feeds/videos.xml?channel_id=UCkbwOi_U5CBkevtlVhuzWnA'
+author = 'Backend Banter'
+tags = ['video']
+[[markata.reader]]
+url = 'https://blog.boot.dev/feed/'
+author = 'boot.dev'
+tags = ['written']
+[[markata.reader]]
+url = 'https://www.youtube.com/feeds/videos.xml?channel_id=UCUyeluBRhGPCW4rPe_UvBZQ'
+author = 'ThePrimeTime'
+tags = ['video']
+[[markata.reader]]
+url = 'https://jrs-s.net/feed/'
+author = 'Jim Salter'
+tags = ['written']
+[[markata.reader]]
+url = 'https://simonwillison.net/atom/everything/'
+author = 'Simon Willison'
+tags = ['written']
+[[markata.reader]]
+url = 'https://blakewatson.com/feed/'
+author = 'Blake Watson'
+tags = ['written']
+[[markata.reader]]
+url = 'https://blog.kubesimplify.com/rss.xml'
+author = 'KubeSimplify'
+tags = ['written']
+[[markata.reader]]
+url = 'https://kerkour.com/feed.xml'
+author = 'Sylvain Kerkour'
+tags = ['written']
 
 
 # markata feeds
@@ -111,26 +153,35 @@ author = 'Syntax.fm'
 # card_template="""
 # """
 
-[[markata.feeds]]
 template='feed.html'
-slug = 'archive'
 title = "Reader"
+card_template = "card.html"
+
+[[markata.feeds]]
+slug = 'archive'
 sort = 'date'
 reverse = true
-card_template = """
-<li>
-<a href="{{ slug }}">
-{% if post.image %}
-<img src="{{ post.image }}" loading="lazy" />
-{% endif %}
-<h2>{{ title }}</h2>
-</a>
-<p>
-{{ date  }}
-</p>
-<p>{{ content | e | truncate }}</p>
-</li>
-"""
+
+[[markata.feeds]]
+slug = 'all'
+title = "Reader - All"
+sort = 'date'
+reverse = true
+
+
+[[markata.feeds]]
+slug = 'video'
+title = "Reader - Video"
+filter = "'video' in post.tags"
+sort = 'date'
+reverse = true
+
+[[markata.feeds]]
+slug = 'written'
+title = "Reader - Written"
+filter = "'written' in post.tags"
+sort = 'date'
+reverse = true
 
 # [[markata.feeds]]
 # slug = 'docs'
@@ -182,6 +233,18 @@ card_template = """
 [[markata.head.meta]]
 name = "og:author_email"
 content = "waylon@waylonwalker.com"
+
+[[markata.head.meta]]
+name = "og:image"
+content = "/og.png?version=2"
+
+[[markata.head.meta]]
+name = "og:image:height"
+content = "600"
+
+[[markata.head.meta]]
+name = "og:image:width"
+content = "1200"
 
 [markata.tui]
 new_cmd = ['tmux', 'popup', 'markata', 'new', 'post']

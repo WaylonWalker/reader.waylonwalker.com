@@ -1,0 +1,13 @@
+<li
+    style="list-style-type: none; padding: 1rem; margin: 1rem auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 1rem; max-width: 800px; width: 800px; border-radius: 0.5rem; border: 1px solid {{ '#fafa;' }}">
+    <a href="{{ post.link }}">
+        {% if post.image %}
+        <img src="{{ post.image }}" loading="lazy" style='max-width: -webkit-fill-available;' />
+        {% endif %}
+        <h2>{{ post.title }}</h2>
+    </a>
+    <p>
+        {{ post.date }}
+    </p>
+    <p>{{ post.content | e | truncate }}</p>
+</li>

@@ -18,6 +18,7 @@ class Feed(pydantic.BaseModel):
     url: str
     author: Optional[str]
     feed: Optional[Any] = None
+    tags: Optional[List[str]]
 
 
 class ReaderConfig(pydantic.BaseModel):
@@ -67,14 +68,14 @@ def load(markata) -> None:
                 markata=markata,
                 path="None",
                 date=post.get("published"),
-                # output_html=output_html,
                 title=post.get("title", "untitled")
                 + " - "
                 + post.get("author", feed.author),
                 content=post.get("summary", ""),
-                # file=file,
+                article_html=post.get("summary", ""),
                 slug=post.get("link"),
+                link=post.get("link"),
                 image=image,
-                # edit_link=edit_link,
+                tags=feed.tags,
             )
             markata.articles.append(article)
