@@ -1,0 +1,84 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "reader-waylonwalker-com"
+dynamic = ["version"]
+description = 'My personal rss reader.'
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Waylon S. Walker", email = "waylon@waylonwalker.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  'markata',
+  'feedparser',
+]
+
+[project.urls]
+Documentation = "https://github.com/unknown/reader-waylonwalker-com#readme"
+Issues = "https://github.com/unknown/reader-waylonwalker-com/issues"
+Source = "https://github.com/unknown/reader-waylonwalker-com"
+
+[tool.hatch.version]
+path = "reader_waylonwalker_com/__about__.py"
+
+[tool.hatch.envs.default]
+dependencies = [
+  "coverage[toml]>=6.5",
+  "pytest",
+]
+[tool.hatch.envs.default.scripts]
+test = "pytest {args:tests}"
+test-cov = "coverage run -m pytest {args:tests}"
+cov-report = [
+  "- coverage combine",
+  "coverage report",
+]
+cov = [
+  "test-cov",
+  "cov-report",
+]
+
+[[tool.hatch.envs.all.matrix]]
+python = ["3.8", "3.9", "3.10", "3.11", "3.12"]
+
+[tool.hatch.envs.types]
+dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:reader_waylonwalker_com tests}"
+
+[tool.coverage.run]
+source_pkgs = ["reader_waylonwalker_com", "tests"]
+branch = true
+parallel = true
+omit = [
+  "reader_waylonwalker_com/__about__.py",
+]
+
+[tool.coverage.paths]
+reader_waylonwalker_com = ["reader_waylonwalker_com", "*/reader-waylonwalker-com/reader_waylonwalker_com"]
+tests = ["tests", "*/reader-waylonwalker-com/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
