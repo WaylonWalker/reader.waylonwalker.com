@@ -1,0 +1,8 @@
+{% extends "content_base.html" %}
+{% block content %}
+<ul class='flex flex-col flex-wrap flex-grow px-0 sm:px-8 mx-auto min-h-screen justify-evenly max-w-[100vw]'>
+    {% for post in posts %}
+    {% include feed.config.card_template %}
+    {% endfor %}
+</ul>
+{% endblock %}

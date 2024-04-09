@@ -1,13 +1,37 @@
-<li
-    style="list-style-type: none; padding: 1rem; margin: 1rem auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 1rem; max-width: 800px; width: 800px; border-radius: 0.5rem; border: 1px solid {{ '#fafa;' }}">
-    <a href="{{ post.link }}">
-        {% if post.image %}
-        <img src="{{ post.image }}" loading="lazy" style='max-width: -webkit-fill-available;' />
-        {% endif %}
-        <h2>{{ post.title }}</h2>
-    </a>
-    <p>
-        {{ post.date }}
-    </p>
-    <p>{{ post.content | e | truncate }}</p>
+<li class="relative my-6 rounded-lg bg-gradient-to-r from-rose-500 via-yellow-500 to-rose-900 m-auto p-0 max-w-[100vw]
+           before:absolute
+           before:w-full
+           before:h-full
+           before:-z-10
+           before:bg-gradient-to-r
+           before:from-rose-500/60
+           before:via-yellow-500/60
+           before:to-rose-900/60
+           before:left-0
+           before:top-0
+           before:blur-[1rem]
+           xl:before:blur-[.75rem]
+          ">
+    <!-- <div class="bg-gradient-to-r from-rose-500 via-yellow-500 to-rose-900 m-auto p-1"> -->
+    <div
+        class='w-full p-0 list-none rounded-lg mx-auto flex flex-col xl:flex-row max-w-3xl xl:max-w-6xl overflow-hidden bg-neutral-900'>
+        <div class='m-auto xl:m-0 p-0 w-full xl:w-1/2 bg-black border-b-2 border-rose-500/20'>
+            {% if post.image %}
+            <a href="{{ post.link }}">
+                <img src="{{ post.image }}" loading="lazy" style='max-width: -webkit-fill-available;'
+                    class='rounded-t-lg m-auto xl:rounded-none xl:rounded-l-lg xl:m-0' />
+            </a>
+            {% endif %}
+        </div>
+        <div class='mx-2 m-0 p-0 w-fit xl:w-1/2'>
+            <a href="{{ post.link }}" class='prose-xl'>
+                <h2 class='m-2 text-neutral-500 font-black mt-6 mb-2 xl:my-0'>{{ post.title }}</h2>
+            </a>
+            <p class='m-2 prose text-neutral-400'>
+                {{ post.date }}
+            </p>
+            <p class='m-2 prose-xl break-word'>{{ post.content | e | truncate }}</p>
+        </div>
+    </div>
+    <!-- </div> -->
 </li>

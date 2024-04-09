@@ -1,0 +1,10 @@
+<header class='flex justify-center items-center p-8'>
+
+    <nav class='flex justify-center items-center my-4 gap-8'>
+        {% for text, link in markata.config.nav.items() %}
+        <a
+            href='{{"/" if link.startswith("/")}}{{"" if "://" in link else markata.config["path_prefix"]}}{{link.lstrip("/")}}'>{{text}}</a>
+        {% endfor %}
+    </nav>
+
+</header>

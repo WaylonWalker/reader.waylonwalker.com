@@ -1,17 +1,11 @@
 """Reader load plugin."""
-import itertools
-from pathlib import Path
-from typing import TYPE_CHECKING, Any, Callable, List, Optional, Union
+from typing import Any, List, Optional
 
 import feedparser
-import frontmatter
-import more_itertools
 import pydantic
 from bs4 import BeautifulSoup
-from markata import background
+
 from markata.hookspec import hook_impl, register_attr
-from rich.progress import BarColumn, Progress
-from yaml.parser import ParserError
 
 
 class Feed(pydantic.BaseModel):
@@ -27,7 +21,6 @@ class ReaderConfig(pydantic.BaseModel):
 
 class Config(pydantic.BaseModel):
     reader: Optional[List[Feed]]
-    # reader: ReaderConfig = ReaderConfig()
 
 
 @hook_impl
@@ -39,11 +32,6 @@ def config_model(markata) -> None:
 @hook_impl
 @register_attr("articles", "posts")
 def load(markata) -> None:
-    Progress(
-        BarColumn(bar_width=None),
-        transient=True,
-        console=markata.console,
-    )
     for feed in markata.config.reader:
         feed.feed = feedparser.parse(feed.url)
 
@@ -62,7 +50,9 @@ def load(markata) -> None:
                 "url",
             )
             if image is None:
-                image = f"https://shots.wayl.one/shot/?url={post.get('link')}&height=450&width=800&scaled_width=800&scaled_height=450&selectors="
+                image = (
+                    f"https://shots.wayl.one/shot/?url={post.get('link')}&height=450&width=800&scaled_width=800&scaled_height=450&selectors="
+                )
 
             article = markata.Post(
                 markata=markata,
@@ -79,3 +69,5 @@ def load(markata) -> None:
                 tags=feed.tags,
             )
             markata.articles.append(article)
+    markata.posts = markata.articles
+    

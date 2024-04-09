@@ -11,6 +11,7 @@
 'all' = '/all'
 'written' = '/written'
 'video' = '/video'
+'podcast' = '/podcast'
 # 'GitHub' = 'https://github.com/WaylonWalker/markata'
 # 'docs' = 'https://markata.dev/docs/'
 # 'plugins' = 'https://markata.dev/plugins/'
@@ -30,6 +31,7 @@ hooks = [
     "markata.plugins.datetime",
     "markata.plugins.feeds",
     "markata.plugins.post_template",
+    # "markata.plugins.publish_html",
     # "default",
 ]
 # disabled_hooks = [
@@ -80,6 +82,7 @@ twitter_site = "@_waylonwalker"
 url = 'https://daverupert.com/atom.xml'
 author = 'David Rupert'
 tags = ['written']
+
 [[markata.reader]]
 url = 'https://joelhooks.com/rss.xml'
 author = 'Joel Hooks'
@@ -136,7 +139,26 @@ tags = ['written']
 url = 'https://kerkour.com/feed.xml'
 author = 'Sylvain Kerkour'
 tags = ['written']
-
+[[markata.reader]]
+url = 'https://www.youtube.com/feeds/videos.xml?channel_id=UCbRP3c757lWg9M-U7TyEkXA'
+author = 't3dotgg'
+tags = ['video']
+[[ markata.reader]]
+url = 'https://changelog.com/master/feed'
+author = 'Changelog'
+tags = ['podcast']
+[[markata.reader]]
+url = 'https://pythonbytes.fm/episodes/rss'
+author = 'PythonBytes'
+tags = ['podcast']
+[[markata.reader]]
+url='https://talkpython.fm/episodes/rss'
+author='TalkPython'
+tags = ['podcast']
+[[markata.reader]]
+url = 'https://feeds.transistor.fm/test-code-in-python'
+author = 'TestAndCode'
+tags = ['podcast']
 
 # markata feeds
 # creating pages of posts
@@ -180,6 +202,13 @@ reverse = true
 slug = 'written'
 title = "Reader - Written"
 filter = "'written' in post.tags"
+sort = 'date'
+reverse = true
+
+[[markata.feeds]]
+slug = 'podcast'
+title = "Reader - podcast"
+filter = "'podcast' in post.tags"
 sort = 'date'
 reverse = true
 
@@ -236,7 +265,7 @@ content = "waylon@waylonwalker.com"
 
 [[markata.head.meta]]
 name = "og:image"
-content = "/og.png?version=2"
+content = f"https://shots.wayl.one/shot/?url=https://reader.waylonwalker.com&height=450&width=800&scaled_width=800&scaled_height=450&selectors="
 
 [[markata.head.meta]]
 name = "og:image:height"
@@ -245,6 +274,9 @@ content = "600"
 [[markata.head.meta]]
 name = "og:image:width"
 content = "1200"
+
+[[ markata.head.script ]]
+src = "https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"
 
 [markata.tui]
 new_cmd = ['tmux', 'popup', 'markata', 'new', 'post']
