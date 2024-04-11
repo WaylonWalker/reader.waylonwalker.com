@@ -31,6 +31,7 @@ hooks = [
     "markata.plugins.datetime",
     "markata.plugins.feeds",
     "markata.plugins.post_template",
+    "markata.plugins.pyinstrument",
     # "markata.plugins.publish_html",
     # "default",
 ]
@@ -265,7 +266,7 @@ content = "waylon@waylonwalker.com"
 
 [[markata.head.meta]]
 name = "og:image"
-content = f"https://shots.wayl.one/shot/?url=https://reader.waylonwalker.com&height=450&width=800&scaled_width=800&scaled_height=450&selectors="
+content = "https://shots.wayl.one/shot/?url=https://reader.waylonwalker.com&height=450&width=800&scaled_width=800&scaled_height=450&selectors="
 
 [[markata.head.meta]]
 name = "og:image:height"

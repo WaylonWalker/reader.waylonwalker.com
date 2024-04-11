@@ -38,7 +38,7 @@ def load(markata) -> None:
     if "articles" not in markata.__dict__:
         markata.articles = []
     for feed in markata.config.reader:
-        for post in feed.feed["entries"]:
+        for post in feed.feed["entries"][0:10]:
             if post.get("title") == "":
                 post["title"] = post.get("link")
             if "<" in post.get("summary"):
