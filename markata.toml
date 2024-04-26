@@ -160,6 +160,10 @@ tags = ['podcast']
 url = 'https://feeds.transistor.fm/test-code-in-python'
 author = 'TestAndCode'
 tags = ['podcast']
+[[markata.reader]]
+url = 'https://vickiboykis.com/index.xml'
+author = 'Vicki Boykis'
+tags = ['written']
 
 # markata feeds
 # creating pages of posts
