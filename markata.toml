@@ -164,6 +164,15 @@ tags = ['podcast']
 url = 'https://vickiboykis.com/index.xml'
 author = 'Vicki Boykis'
 tags = ['written']
+[[markata.reader]]
+url='https://maggieappleton.com/rss.xml'
+author='Maggie Appleton'
+tags = ['written']
+[[markata.reader]]
+url='https://www.christopherbiscardi.com/rss.xml'
+author='Christopher Biscardi'
+tags = ['written']
+
 
 # markata feeds
 # creating pages of posts
