@@ -1,4 +1,5 @@
 """Reader load plugin."""
+
 from typing import Any, List, Optional
 
 import feedparser
@@ -13,6 +14,7 @@ class Feed(pydantic.BaseModel):
     author: Optional[str]
     feed: Optional[Any] = None
     tags: Optional[List[str]]
+    limit: Optional[int] = 20
 
 
 class ReaderConfig(pydantic.BaseModel):
@@ -38,7 +40,7 @@ def load(markata) -> None:
     if "articles" not in markata.__dict__:
         markata.articles = []
     for feed in markata.config.reader:
-        for post in feed.feed["entries"][0:10]:
+        for post in feed.feed["entries"][0 : feed.limit]:
             if post.get("title") == "":
                 post["title"] = post.get("link")
             if "<" in post.get("summary"):
@@ -50,9 +52,7 @@ def load(markata) -> None:
                 "url",
             )
             if image is None:
-                image = (
-                    f"https://shots.wayl.one/shot/?url={post.get('link')}&height=450&width=800&scaled_width=800&scaled_height=450&selectors="
-                )
+                image = f"https://shots.wayl.one/shot/?url={post.get('link')}&height=450&width=800&scaled_width=800&scaled_height=450&selectors="
 
             article = markata.Post(
                 markata=markata,
@@ -70,4 +70,3 @@ def load(markata) -> None:
             )
             markata.articles.append(article)
     markata.posts = markata.articles
-    

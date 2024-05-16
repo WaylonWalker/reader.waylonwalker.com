@@ -128,6 +128,7 @@ tags = ['written']
 url = 'https://simonwillison.net/atom/everything/'
 author = 'Simon Willison'
 tags = ['written']
+limit = 50 # Simon has many small posts that get lost quickly
 [[markata.reader]]
 url = 'https://blakewatson.com/feed/'
 author = 'Blake Watson'
