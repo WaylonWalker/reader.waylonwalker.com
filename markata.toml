@@ -173,6 +173,11 @@ tags = ['written']
 url='https://www.christopherbiscardi.com/rss.xml'
 author='Christopher Biscardi'
 tags = ['written']
+[[markata.reader]]
+url='https://github.com/jbranchaud/til/commits/master.atom'
+author='jbranchaud'
+tags = ['written']
+
 
 
 # markata feeds
