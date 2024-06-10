@@ -177,6 +177,11 @@ tags = ['written']
 url='https://github.com/jbranchaud/til/commits/master.atom'
 author='jbranchaud'
 tags = ['written']
+[[markata.reader]]
+url='https://daringfireball.net/feeds/main'
+author='John Gruber'
+tags = ['written']
+
 
 
 
