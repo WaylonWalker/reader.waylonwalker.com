@@ -194,7 +194,7 @@ url='https://daniel.haxx.se/blog/feed/'
 author='Daniel Stenberg'
 tags = ['written']
 [[markata.reader]]
-url='https://thomasbaart.nl/feed/'
+url='https://micro.thomasbaart.nl/feed/'
 author='Thomas Baart'
 tags = ['written']
 [[markata.reader]]
