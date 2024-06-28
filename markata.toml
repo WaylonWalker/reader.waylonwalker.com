@@ -181,7 +181,26 @@ tags = ['written']
 url='https://daringfireball.net/feeds/main'
 author='John Gruber'
 tags = ['written']
-
+[[markata.reader]]
+url='https://www.youtube.com/feeds/videos.xml?channel_id=UC2SvcdTaeU8qX1oxKNwIMnw'
+author='Ben Orenstein'
+tags = ['video']
+[[markata.reader]]
+url='https://www.youtube.com/feeds/videos.xml?channel_id=UCsjCKly4KtkvVyDjG_XkzEA'
+author='Joe Scotto'
+tags = ['video']
+[[markata.reader]]
+url='https://daniel.haxx.se/blog/feed/'
+author='Daniel Stenberg'
+tags = ['written']
+[[markata.reader]]
+url='https://thomasbaart.nl/feed/'
+author='Thomas Baart'
+tags = ['written']
+[[markata.reader]]
+url='https://austencam.com/feed'
+author='Austin Cameron'
+tags = ['written']
 
 
 
