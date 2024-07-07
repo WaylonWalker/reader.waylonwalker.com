@@ -231,6 +231,8 @@ card_template = "card.html"
 slug = 'archive'
 sort = 'date'
 reverse = true
+template='feed.html'
+card_template = "card.html"
 
 [[markata.feeds]]
 slug = 'all'
@@ -247,11 +249,31 @@ sort = 'date'
 reverse = true
 
 [[markata.feeds]]
+slug = 'ten-video'
+title = "Reader - Video"
+filter = "'video' in post.tags"
+sort = 'date'
+partial_template = 'slim-card.html'
+reverse = true
+head = 10
+
+
+[[markata.feeds]]
 slug = 'written'
 title = "Reader - Written"
 filter = "'written' in post.tags"
 sort = 'date'
 reverse = true
+
+[[markata.feeds]]
+slug = 'ten-written'
+title = "Reader - Written"
+filter = "'written' in post.tags"
+sort = 'date'
+partial_template = 'slim-card.html'
+reverse = true
+head = 10
+
 
 [[markata.feeds]]
 slug = 'podcast'
@@ -260,52 +282,14 @@ filter = "'podcast' in post.tags"
 sort = 'date'
 reverse = true
 
-# [[markata.feeds]]
-# slug = 'docs'
-# title = "Documentation"
-# filter = '"markata" not in slug and "tests" not in slug and "404" not in slug'
-# sort = 'slug'
-#
-# [[markata.feeds]]
-# slug = 'autodoc'
-# title = "AutoDoc Python Modules."
-# filter = '"markata" in slug and "tests" not in slug and "404" not in slug'
-# sort = 'slug'
-#
-# [[markata.feeds]]
-# slug = 'autodoc'
-# title = "AutoDoc Python Modules."
-# filter = '"markata" in slug and "plugin" not in slug and "tests" not in slug and "404" not in slug'
-# sort = 'slug'
-#
-# [[markata.feeds]]
-# slug = 'all'
-# title = "All Markata Modules"
-# filter = "True"
-#
-# [[markata.feeds]]
-# slug = 'core-modules'
-# title = "Markata Core Modules"
-# filter = "'plugin' not in slug and 'test' not in slug and title.lower().endswith('.py')"
-#
-# [[markata.feeds]]
-# slug = 'core_modules'
-# title = "Markata Core Modules"
-# filter = "'plugin' not in slug and 'test' not in slug and title.lower().endswith('.py')"
-#
-# [[markata.feeds]]
-# slug = 'plugins'
-# title = "Markata Plugins"
-# filter = "'plugin' in slug and 'test' not in slug"
-
-# [markata.jinja_md]
-# ignore = [
-#     'jinja_md.md',
-#     'post_template.md',
-#     'publish_html.md',
-#     'CHANGELOG.md',
-#     'feeds.md',
-# ]
+[[markata.feeds]]
+slug = 'ten-podcast'
+title = "Reader - podcast"
+filter = "'podcast' in post.tags"
+sort = 'date'
+partial_template = 'slim-card.html'
+reverse = true
+head = 10
 
 [[markata.head.meta]]
 name = "og:author_email"

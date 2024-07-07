@@ -35,11 +35,15 @@ def config_model(markata) -> None:
 @register_attr("articles", "posts")
 def load(markata) -> None:
     for feed in markata.config.reader:
+        markata.console.log(f"Loading feed: {feed.url}")
         feed.feed = feedparser.parse(feed.url)
 
     if "articles" not in markata.__dict__:
         markata.articles = []
     for feed in markata.config.reader:
+        markata.console.log(f"Creating posts for: {feed.url}")
+        markata.console.log(f'feed has {len(feed.feed["entries"])} entries')
+
         for post in feed.feed["entries"][0 : feed.limit]:
             if post.get("title") == "":
                 post["title"] = post.get("link")
