@@ -9,14 +9,11 @@ setup:
     uv pip install -e .
 
 clean:
-    markata clean
+    uv run markata clean
 
 build:
-    #!/usr/bin/env bash
-    set -euxo pipefail
-    . ./.venv/bin/activate
-    mkdir -p markout
-    markata build
+    uv run markata build
+
 
 deploy:
     npx wrangler pages deploy markout --project-name reader-waylonwalker-com --branch markout

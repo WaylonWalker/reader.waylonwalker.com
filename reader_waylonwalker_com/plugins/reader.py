@@ -2,9 +2,9 @@
 
 from typing import Any, List, Optional
 
+from bs4 import BeautifulSoup
 import feedparser
 import pydantic
-from bs4 import BeautifulSoup
 
 from markata.hookspec import hook_impl, register_attr
 
@@ -47,7 +47,7 @@ def load(markata) -> None:
         for post in feed.feed["entries"][0 : feed.limit]:
             if post.get("title") == "":
                 post["title"] = post.get("link")
-            if "<" in post.get("summary"):
+            if "<" in post.get("summary", ""):
                 post["summary"] = BeautifulSoup(
                     post.get("summary"), "html.parser"
                 ).get_text()
