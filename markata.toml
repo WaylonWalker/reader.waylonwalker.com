@@ -221,6 +221,22 @@ tags = ['video']
 url='https://www.youtube.com/feeds/videos.xml?channel_id=UCHugE6eRhqB9_AZQh4DDbIw'
 author='Jupiter Broadcasting'
 tags = ['video']
+[[markata.reader]]
+author='FAFO.fm'
+tags = ['podcast']
+url='https://feeds.transistor.fm/fork-around-and-find-out'
+[[markata.reader]]
+author='makeitwork'
+tags = ['podcast']
+url='https://feeds.transistor.fm/makeitwork'
+[[markata.reader]]
+author='Cassidy Williams'
+tags = ['written']
+url='https://cassidoo.co/rss.xml'
+[[markata.reader]]
+author='Justin Garrison'
+tags = ['written']
+url='https://justingarrison.com/index.xml'
 
 
 
@@ -306,6 +322,7 @@ sort = 'date'
 partial_template = 'slim-card.html'
 reverse = true
 head = 10
+
 
 [[markata.head.meta]]
 name = "og:author_email"
