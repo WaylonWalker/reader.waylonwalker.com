@@ -237,6 +237,10 @@ url='https://cassidoo.co/rss.xml'
 author='Justin Garrison'
 tags = ['written']
 url='https://justingarrison.com/index.xml'
+[[markata.reader]]
+author='Trey Hunner'
+tags = ['written']
+url='https://treyhunner.com/atom.xml'
 
 
 
