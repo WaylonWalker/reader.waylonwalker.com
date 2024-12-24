@@ -241,7 +241,10 @@ url='https://justingarrison.com/index.xml'
 author='Trey Hunner'
 tags = ['written']
 url='https://treyhunner.com/atom.xml'
-
+[[markata.reader]]
+author='Jeff Triplett'
+tags = ['written']
+url='https://micro.webology.dev/feed.xml'
 
 
 # markata feeds
