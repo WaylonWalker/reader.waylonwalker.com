@@ -249,7 +249,10 @@ url='https://micro.webology.dev/feed.xml'
 author='Matthias Ott'
 tags = ['written']
 url='https://matthiasott.com/feed'
-
+[[markata.reader]]
+author='ownyourweb'
+tags = ['written']
+url='https://buttondown.com/ownyourweb/rss'
 
 # markata feeds
 # creating pages of posts
