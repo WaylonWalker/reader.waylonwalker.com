@@ -253,6 +253,10 @@ url='https://matthiasott.com/feed'
 author='ownyourweb'
 tags = ['written']
 url='https://buttondown.com/ownyourweb/rss'
+[[markata.reader]]
+author='CSS Wizardry'
+tags = ['written']
+url='https://csswizardry.com/feed.xml'
 
 # markata feeds
 # creating pages of posts
