@@ -257,6 +257,18 @@ url='https://buttondown.com/ownyourweb/rss'
 author='CSS Wizardry'
 tags = ['written']
 url='https://csswizardry.com/feed.xml'
+[[markata.reader]]
+author='Bryan Hogan'
+tags = ['written']
+url='https://bryanhogan.com/rss.xml'
+[[markata.reader]]
+author='Brittany Ellich'
+tags = ['written']
+url='https://brittanyellich.com/index.xml'
+[[markata.reader]]
+author='Julia Evans'
+tags = ['written']
+url='https://jvns.ca/atom.xml'
 
 # markata feeds
 # creating pages of posts
