@@ -20,8 +20,10 @@
 [markata]
 # bump site version to bust GitHub actions cache
 site_version = 1
+output_dir = 'markout'
 hooks = [
     "reader_waylonwalker_com.plugins.reader",
+    "markata.plugins.skip",
     "markata.plugins.copy_assets",
     "markata.plugins.base_cli",
     "markata.plugins.post_model",
@@ -269,6 +271,14 @@ url='https://brittanyellich.com/index.xml'
 author='Julia Evans'
 tags = ['written']
 url='https://jvns.ca/atom.xml'
+[[markata.reader]]
+author='Rock Paper Shotgun - Features'
+tags = ['written']
+url='https://www.rockpapershotgun.com/feed/features'
+[[markata.reader]]
+author='DJ Adams'
+tags = ['written']
+url='https://qmacro.org/feed.xml'
 
 # markata feeds
 # creating pages of posts
