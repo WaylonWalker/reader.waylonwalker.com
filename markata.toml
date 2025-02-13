@@ -365,8 +365,52 @@ head = 10
 
 
 [[markata.head.meta]]
+name = "twitter:title"
+content = "{{ post.title|e }}"
+
+[[markata.head.meta]]
+name = "og:title"
+content = "{{ post.title|e }}"
+
+[[markata.head.meta]]
+name = "description"
+content = "{{ post.description|e }}"
+
+[[markata.head.meta]]
+name = "og:description"
+content = "{{ post.description|e }}"
+
+[[markata.head.meta]]
+name = "twitter:description"
+content = "{{ post.description|e }}"
+
+[[markata.head.meta]]
+name = "og:type"
+content = "website"
+
+[[markata.head.meta]]
 name = "og:author_email"
 content = "waylon@waylonwalker.com"
+
+[[markata.head.meta]]
+name = "twitter:creator"
+content = "@_waylonwalker"
+
+[[markata.head.meta]]
+name = "twitter:site"
+content = "@_waylonwalker"
+
+[[markata.head.meta]]
+name = "twitter:card"
+content = "summary_large_image"
+
+[[markata.head.meta]]
+name = "og:author"
+content = "Waylon Walker"
+
+[[markata.head.meta]]
+name = "og:site_name"
+content = "Waylon Walker"
 
 [[markata.head.meta]]
 name = "og:image"
@@ -379,6 +423,26 @@ content = "600"
 [[markata.head.meta]]
 name = "og:image:width"
 content = "1200"
+
+[[markata.head.meta]]
+name = "generator"
+content = "markata {{ __version__ }}"
+
+[[ markata.head.link ]]
+href = "https://webmention.io/waylonwalker.com/webmention"
+rel = "webmention"
+
+[[markata.head.meta]]
+name = "monetization"
+content = "$ilp.uphold.com/MGN2ni2YMXaQ"
+
+[[ markata.head.link ]]
+href = "https://indieauth.com/auth"
+rel = "authorization_endpoint"
+
+[[ markata.head.link ]]
+href = "https://tokens.indieauth.com/token"
+rel = "token_endpoint"
 
 [[ markata.head.script ]]
 src = "https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"
