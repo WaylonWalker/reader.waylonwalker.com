@@ -1,6 +1,14 @@
-## 0.3.0
+## 0.4.0
+
+_2025-02-12_
 
 - upgrade markata to 0.9.1.dev5
+
+## 0.3.0 - bad release
+
+_2025-02-12_
+
+- tried to ~upgrade markata to 0.9.1.dev5~
 
 ## 0.2.18
 

@@ -71,6 +71,7 @@ def load(markata) -> None:
                 link=post.get("link"),
                 image=image,
                 tags=feed.tags,
+                skip=False,
             )
             markata.articles.append(article)
     markata.posts = markata.articles

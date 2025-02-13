@@ -1,5 +1,9 @@
+mod container
+
+[group('just')]
 default:
   @just --list
+  just container
 
 
 # fuzzy picker
@@ -7,6 +11,7 @@ default:
 f:
   @just --choose
 
+# lint project
 [group('lint')]
 setup:
     #!/usr/bin/env bash
@@ -20,7 +25,7 @@ clean:
     uv run markata clean
 
 [group('work')]
-build:
+build-site:
     uv run markata build
 
 
@@ -40,10 +45,11 @@ deploy-image:
     set -euxo pipefail
     version=$(cat version)
     echo deploying {{GREEN}}$version{{NORMAL}}
-    podman build -t docker.io/waylonwalker/reader-waylonwalker-com -t docker.io/waylonwalker/reader-waylonwalker-com:$version -t registry.wayl.one/reader-waylonwalker-com -t registry.wayl.one/reader-waylonwalker-com:$version .
+    podman build -t docker.io/waylonwalker/reader-waylonwalker-com -t docker.io/waylonwalker/reader-waylonwalker-com:$version -t registry.wayl.one/reader-waylonwalker-com -t registry.wayl.one/reader-waylonwalker-com:$version -f container/Containerfile .
     # git tag $version
-    podman push docker.io/waylonwalker/reader-waylonwalker-com
-    podman push docker.io/waylonwalker/reader-waylonwalker-com:$version
+    # podman push docker.io/waylonwalker/reader-waylonwalker-com
+    # podman push docker.io/waylonwalker/reader-waylonwalker-com:$version
+
     podman push registry.wayl.one/reader-waylonwalker-com
     podman push registry.wayl.one/reader-waylonwalker-com:$version
 
