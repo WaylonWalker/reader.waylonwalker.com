@@ -1,3 +1,7 @@
+## 0.3.0
+
+- upgrade markata to 0.9.1.dev5
+
 ## 0.2.18
 
 - fix missing h1
