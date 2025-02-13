@@ -1,3 +1,7 @@
+## 0.2.18
+
+- fix missing h1
+
 ## 0.2.17
 
 - fix multiple title tag error
