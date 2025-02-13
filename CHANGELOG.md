@@ -1,3 +1,7 @@
+## 0.2.17
+
+- fix multiple title tag error
+
 ## 0.2.16
 
 - add qmacro
