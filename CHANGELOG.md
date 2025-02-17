@@ -1,3 +1,8 @@
+## 0.5.0
+
+- downgrade markata to 0.9.0
+- add new feeds
+
 ## 0.4.1
 
 _2025-02-13_

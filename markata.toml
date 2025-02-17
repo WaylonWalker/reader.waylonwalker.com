@@ -279,6 +279,22 @@ url='https://www.rockpapershotgun.com/feed/features'
 author='DJ Adams'
 tags = ['written']
 url='https://qmacro.org/feed.xml'
+[[markata.reader]]
+author='David Bushell'
+tags = ['written']
+url='https://dbushell.com/rss.xml'
+[[markata.reader]]
+author='David Bushell'
+tags = ['written']
+url='https://dbushell.com/notes/rss.xml'
+[[markata.reader]]
+author='Whitep4nth3r'
+tags = ['written']
+url='https://whitep4nth3r.com/feed.xml'
+[[markata.reader]]
+author='CSS Tricks'
+tags = ['written']
+url='https://css-tricks.com/feed/'
 
 # markata feeds
 # creating pages of posts
