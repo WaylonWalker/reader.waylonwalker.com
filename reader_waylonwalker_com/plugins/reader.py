@@ -1,8 +1,10 @@
 """Reader load plugin."""
 
+import datetime
 from typing import Any, List, Optional
 
 from bs4 import BeautifulSoup
+import dateutil.parser
 import feedparser
 import pydantic
 
@@ -31,6 +33,19 @@ def config_model(markata) -> None:
     markata.config_models.append(Config)
 
 
+def parse_date(date_str: str) -> datetime.datetime:
+    """Parse a date string into a datetime object."""
+    if not date_str:
+        return None
+    try:
+        dt = dateutil.parser.parse(date_str)
+        print(f"Parsed {date_str} into {dt}")
+        return dt
+    except (ValueError, TypeError, AttributeError) as e:
+        print(f"Failed to parse {date_str}: {e}")
+        return None
+
+
 @hook_impl
 @register_attr("articles", "posts")
 def load(markata) -> None:
@@ -42,7 +57,7 @@ def load(markata) -> None:
         markata.articles = []
     for feed in markata.config.reader:
         markata.console.log(f"Creating posts for: {feed.url}")
-        markata.console.log(f'feed has {len(feed.feed["entries"])} entries')
+        markata.console.log(f"feed has {len(feed.feed['entries'])} entries")
 
         for post in feed.feed["entries"][0 : feed.limit]:
             if post.get("title") == "":
@@ -58,10 +73,29 @@ def load(markata) -> None:
             if image is None:
                 image = f"https://shots.wayl.one/shot/?url={post.get('link')}&height=450&width=800&scaled_width=800&scaled_height=450&selectors="
 
+            # Get the published date, trying multiple fields
+            date_time = None
+            for date_field in ["published", "updated", "created"]:
+                date_str = post.get(date_field)
+                markata.console.log(f"Found {date_field}: {date_str}")
+                if date_str:
+                    date_time = parse_date(date_str)
+                    if date_time:
+                        markata.console.log(f"Parsed {date_field} into: {date_time}")
+                        break
+
+            if date_time:
+                raw_date = date_time.isoformat()
+                markata.console.log(f"Using raw_date: {raw_date}")
+            else:
+                raw_date = None
+                markata.console.log("No date found in feed entry")
+
             article = markata.Post(
                 markata=markata,
                 path="None",
-                date=post.get("published"),
+                date=raw_date,
+                datetime=raw_date,
                 title=post.get("title", "untitled")
                 + " - "
                 + post.get("author", feed.author),
@@ -74,4 +108,6 @@ def load(markata) -> None:
                 skip=False,
             )
             markata.articles.append(article)
+        print(f"Created {len(feed.feed['entries'])} posts for {feed.url}")
+    print(f"Created {len(markata.articles)} posts")
     markata.posts = markata.articles
