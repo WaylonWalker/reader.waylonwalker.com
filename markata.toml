@@ -321,6 +321,7 @@ card_template = "card.html"
 
 [[markata.feeds]]
 slug = 'archive'
+title = "My personal rss reader."
 sort = 'date'
 reverse = true
 template='feed.html'
@@ -384,6 +385,9 @@ reverse = true
 head = 10
 
 
+[[markata.head.text]]
+value = "<title>{{ post.title|e }}</title>"
+
 [[markata.head.meta]]
 name = "twitter:title"
 content = "{{ post.title|e }}"
@@ -434,7 +438,7 @@ content = "Waylon Walker"
 
 [[markata.head.meta]]
 property = "og:image"
-content = "https://shots.wayl.one/shot/?url=https://reader.waylonwalker.com&height=450&width=800&scaled_width=800&scaled_height=450&selectors="
+content = 'https://shots.wayl.one/shot/?url=https://waylonwalker.com/reader/og/&height=600&width=1200&scaled_width=1200&scaled_height=600'
 
 [[markata.head.meta]]
 property = "og:image:height"
