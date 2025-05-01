@@ -36,6 +36,7 @@ hooks = [
     "markata.plugins.datetime",
     "markata.plugins.feeds",
     "markata.plugins.post_template",
+    "markata.plugins.jinja_env",
     "markata.plugins.pyinstrument",
     # "markata.plugins.publish_html",
     # "default",
