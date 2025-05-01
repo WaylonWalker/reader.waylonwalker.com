@@ -48,8 +48,11 @@ def parse_date(date_str: str) -> datetime.datetime:
 
 @background.task
 def get_feed(markata, feed):
-    markata.console.log(f"Loading feed: {feed.url}")
+    # markata.console.log(f"Loading feed: {feed.url}")
+    start_time = datetime.datetime.now()
     feed.feed = feedparser.parse(feed.url)
+    end_time = datetime.datetime.now()
+    markata.console.log(f"Loaded feed: {feed.url} in {end_time - start_time}")
 
 
 @hook_impl
