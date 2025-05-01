@@ -9,6 +9,7 @@ import feedparser
 import pydantic
 
 from markata.hookspec import hook_impl, register_attr
+from markata import background
 
 
 class Feed(pydantic.BaseModel):
@@ -39,19 +40,29 @@ def parse_date(date_str: str) -> datetime.datetime:
         return None
     try:
         dt = dateutil.parser.parse(date_str)
-        print(f"Parsed {date_str} into {dt}")
         return dt
     except (ValueError, TypeError, AttributeError) as e:
         print(f"Failed to parse {date_str}: {e}")
         return None
 
 
+@background.task
+def get_feed(markata, feed):
+    markata.console.log(f"Loading feed: {feed.url}")
+    feed.feed = feedparser.parse(feed.url)
+
+
 @hook_impl
 @register_attr("articles", "posts")
 def load(markata) -> None:
-    for feed in markata.config.reader:
-        markata.console.log(f"Loading feed: {feed.url}")
-        feed.feed = feedparser.parse(feed.url)
+    # for feed in markata.config.reader:
+    #     markata.console.log(f"Loading feed: {feed.url}")
+    # feed.feed = feedparser.parse(feed.url)
+    futures = [get_feed(markata, feed) for feed in markata.config.reader]
+    for future in futures:
+        future.result()
+
+    markata.console.log(f"Loaded {len(markata.articles)} articles")
 
     if "articles" not in markata.__dict__:
         markata.articles = []
@@ -77,16 +88,13 @@ def load(markata) -> None:
             date_time = None
             for date_field in ["published", "updated", "created"]:
                 date_str = post.get(date_field)
-                markata.console.log(f"Found {date_field}: {date_str}")
                 if date_str:
                     date_time = parse_date(date_str)
                     if date_time:
-                        markata.console.log(f"Parsed {date_field} into: {date_time}")
                         break
 
             if date_time:
                 raw_date = date_time.isoformat()
-                markata.console.log(f"Using raw_date: {raw_date}")
             else:
                 raw_date = None
                 markata.console.log("No date found in feed entry")
