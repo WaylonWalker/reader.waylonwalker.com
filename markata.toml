@@ -7,6 +7,9 @@
 #
 #                                                  markata.dev
 
+[markata.jinja_env]
+templates_dir = ["templates"]  # Additional template paths to search
+
 [markata.nav]
 'all' = '/all'
 'written' = '/written'
