@@ -55,14 +55,11 @@ def get_feed(markata, feed):
 @hook_impl
 @register_attr("articles", "posts")
 def load(markata) -> None:
-    # for feed in markata.config.reader:
-    #     markata.console.log(f"Loading feed: {feed.url}")
-    # feed.feed = feedparser.parse(feed.url)
     futures = [get_feed(markata, feed) for feed in markata.config.reader]
     for future in futures:
         future.result()
 
-    markata.console.log(f"Loaded {len(markata.articles)} articles")
+    markata.console.log("Loaded articles")
 
     if "articles" not in markata.__dict__:
         markata.articles = []
