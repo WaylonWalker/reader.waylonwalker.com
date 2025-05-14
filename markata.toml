@@ -175,9 +175,10 @@ tags = ['written']
 url='https://maggieappleton.com/rss.xml'
 author='Maggie Appleton'
 tags = ['written']
-[[markata.reader]]
-url='https://www.christopherbiscardi.com/rss.xml'
-author='Christopher Biscardi'
+# issues with date
+# [[markata.reader]]
+# url='https://www.christopherbiscardi.com/rss.xml'
+# author='Christopher Biscardi'
 tags = ['written']
 [[markata.reader]]
 url='https://github.com/jbranchaud/til/commits/master.atom'
@@ -383,10 +384,6 @@ sort = 'date'
 partial_template = 'slim-card.html'
 reverse = true
 head = 10
-
-
-[[markata.head.text]]
-value = "<title>{{ post.title|e }}</title>"
 
 [[markata.head.meta]]
 name = "twitter:title"
