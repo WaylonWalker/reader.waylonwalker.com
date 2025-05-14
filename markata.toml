@@ -179,7 +179,7 @@ tags = ['written']
 # [[markata.reader]]
 # url='https://www.christopherbiscardi.com/rss.xml'
 # author='Christopher Biscardi'
-tags = ['written']
+# tags = ['written']
 [[markata.reader]]
 url='https://github.com/jbranchaud/til/commits/master.atom'
 author='jbranchaud'
@@ -300,6 +300,10 @@ url='https://whitep4nth3r.com/feed.xml'
 author='CSS Tricks'
 tags = ['written']
 url='https://css-tricks.com/feed/'
+[[markata.reader]]
+author='Will McGugan'
+tags = ['written']
+url='https://willmcgugan.github.io/feed'
 
 # markata feeds
 # creating pages of posts
