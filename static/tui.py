@@ -8,6 +8,7 @@
 #     "rich",
 #     "pydantic",
 #     "dateparser",
+#     "markdownify",
 # ]
 # ///
 from datetime import datetime
@@ -21,6 +22,7 @@ from rich.console import RenderableType
 from rich.markdown import Markdown
 from rich.panel import Panel
 import dateparser
+from markdownify import markdownify as md
 
 
 class Article(BaseModel):
@@ -89,43 +91,45 @@ class Article(BaseModel):
         page = BeautifulSoup(resp.text, "html.parser")
 
         body = page.select_one("article") or page
-        parts: list[str] = []
+        # parts: list[str] = []
+        #
+        # # walk through relevant tags in document order
+        # for el in body.find_all(["p", "img", "blockquote", "pre"], recursive=True):
+        #     if el.name == "p":
+        #         text = el.get_text(strip=True)
+        #         if text:
+        #             parts.append(text)
+        #
+        #     elif el.name == "img":
+        #         src = el.get("src")
+        #         alt = el.get("alt", "")
+        #         parts.append(f"![{alt}]({src})")
+        #
+        #     elif el.name == "blockquote":
+        #         quote = el.get_text(strip=True).splitlines()
+        #         for line in quote:
+        #             parts.append(f"> {line}")
+        #
+        #     elif el.name == "pre":
+        #         # assume a <code> child
+        #         code_tag = el.code or el
+        #         code_text = code_tag.get_text()
+        #         # if there's a class like language-python, use it
+        #         cls = ""
+        #         if code_tag.has_attr("class"):
+        #             langs = [c for c in code_tag["class"] if c.startswith("language-")]
+        #             if langs:
+        #                 cls = langs[0].split("-", 1)[1]
+        #         fence = f"```{cls}" if cls else "```"
+        #         parts.append(f"{fence}\n{code_text.rstrip()}\n```")
+        #
+        # markdown_source = f"# {self.title}\n\n" + "\n\n".join(parts)
+        # md = Markdown(markdown_source)
 
-        # walk through relevant tags in document order
-        for el in body.find_all(["p", "img", "blockquote", "pre"], recursive=True):
-            if el.name == "p":
-                text = el.get_text(strip=True)
-                if text:
-                    parts.append(text)
-
-            elif el.name == "img":
-                src = el.get("src")
-                alt = el.get("alt", "")
-                parts.append(f"![{alt}]({src})")
-
-            elif el.name == "blockquote":
-                quote = el.get_text(strip=True).splitlines()
-                for line in quote:
-                    parts.append(f"> {line}")
-
-            elif el.name == "pre":
-                # assume a <code> child
-                code_tag = el.code or el
-                code_text = code_tag.get_text()
-                # if there's a class like language-python, use it
-                cls = ""
-                if code_tag.has_attr("class"):
-                    langs = [c for c in code_tag["class"] if c.startswith("language-")]
-                    if langs:
-                        cls = langs[0].split("-", 1)[1]
-                fence = f"```{cls}" if cls else "```"
-                parts.append(f"{fence}\n{code_text.rstrip()}\n```")
-
-        markdown_source = f"# {self.title}\n\n" + "\n\n".join(parts)
-        md = Markdown(markdown_source)
+        markdown = Markdown(md(resp.text))
 
         return Panel(
-            md,
+            markdown,
             title=self.date.strftime("%Y-%m-%d"),
             subtitle=str(self.link),
             expand=True,
