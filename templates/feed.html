@@ -1,7 +1,7 @@
 {% extends "content_base.html" %}
 {% block content %}
     <h1 class='text-4xl text-neutral-500 font-black mt-6 mb-2 xl:my-0'>{{ feed.title }}</h1>
-    <ul class='flex flex-col flex-wrap flex-grow px-0 sm:px-8 mx-auto min-h-screen justify-evenly max-w-[100vw]'>
+    <ul id='feed' class='feed flex flex-col flex-wrap flex-grow px-0 sm:px-8 mx-auto min-h-screen justify-evenly max-w-[100vw]'>
         {% for post in feed.posts %}
             {% include feed.config.card_template %}
         {% endfor %}

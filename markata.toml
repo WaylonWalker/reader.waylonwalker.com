@@ -64,246 +64,6 @@ hooks = [
 #     "markata.plugins.jinja_md",
 # ]
 #
-## Site Config
-url = "https://reader.waylonwalker.com"
-title = "Reader"
-description = "My personal rss reader."
-rss_description = "My personal rss reader."
-author_name = "Waylon Walker"
-author_email = "waylon@waylonwalaker.com"
-icon = "8bitcc.ico"
-lang = "en"
-repo_url = "https://github.com/waylonwalker/reader.waylonwalker.com"
-repo_branch = "main"
-theme_color = "#322D39"
-background_color = "#B73CF6"
-start_url = "/"
-site_name = "Waylon Walker's Reader"
-short_name = "reader"
-display = "minimal-ui"
-twitter_card = "summary_large_image"
-twitter_creator = "@_waylonwalker"
-twitter_site = "@_waylonwalker"
-
-[[markata.reader]]
-url = 'https://daverupert.com/atom.xml'
-author = 'David Rupert'
-tags = ['written']
-
-[[markata.reader]]
-url = 'https://joelhooks.com/rss.xml'
-author = 'Joel Hooks'
-tags = ['written']
-[[markata.reader]]
-url = 'https://swyx.io/rss.xml'
-author = 'Swyx'
-tags = ['written']
-[[markata.reader]]
-url = 'https://chriscoyier.net/feed/'
-author = 'Chris Coyier'
-tags = ['written']
-[[markata.reader]]
-url = 'https://mathspp.com/blog.rss'
-author = 'Rodrigo@mathsppblog'
-tags = ['written']
-[[markata.reader]]
-url = 'https://blog.jim-nielsen.com/feed.xml'
-author = 'Jim Nielsen'
-tags = ['written']
-[[markata.reader]]
-url = 'https://www.youtube.com/feeds/videos.xml?channel_id=UCyU5wkjgQYGRB0hIHMwm2Sg'
-author = 'Syntax.fm'
-tags = ['video']
-[[markata.reader]]
-url = 'https://www.youtube.com/feeds/videos.xml?channel_id=UCkbwOi_U5CBkevtlVhuzWnA'
-author = 'Backend Banter'
-tags = ['video']
-[[markata.reader]]
-url = 'https://blog.boot.dev/feed/'
-author = 'boot.dev'
-tags = ['written']
-[[markata.reader]]
-url = 'https://www.youtube.com/feeds/videos.xml?channel_id=UCUyeluBRhGPCW4rPe_UvBZQ'
-author = 'ThePrimeTime'
-tags = ['video']
-[[markata.reader]]
-url = 'https://jrs-s.net/feed/'
-author = 'Jim Salter'
-tags = ['written']
-[[markata.reader]]
-url = 'https://simonwillison.net/atom/everything/'
-author = 'Simon Willison'
-tags = ['written']
-limit = 50 # Simon has many small posts that get lost quickly
-[[markata.reader]]
-url = 'https://blakewatson.com/feed/'
-author = 'Blake Watson'
-tags = ['written']
-[[markata.reader]]
-url = 'https://blog.kubesimplify.com/rss.xml'
-author = 'KubeSimplify'
-tags = ['written']
-[[markata.reader]]
-url = 'https://kerkour.com/feed.xml'
-author = 'Sylvain Kerkour'
-tags = ['written']
-[[markata.reader]]
-url = 'https://www.youtube.com/feeds/videos.xml?channel_id=UCbRP3c757lWg9M-U7TyEkXA'
-author = 't3dotgg'
-tags = ['video']
-[[ markata.reader]]
-url = 'https://changelog.com/master/feed'
-author = 'Changelog'
-tags = ['podcast']
-[[markata.reader]]
-url = 'https://pythonbytes.fm/episodes/rss'
-author = 'PythonBytes'
-tags = ['podcast']
-[[markata.reader]]
-url='https://talkpython.fm/episodes/rss'
-author='TalkPython'
-tags = ['podcast']
-[[markata.reader]]
-url = 'https://feeds.transistor.fm/test-code-in-python'
-author = 'TestAndCode'
-tags = ['podcast']
-[[markata.reader]]
-url = 'https://vickiboykis.com/index.xml'
-author = 'Vicki Boykis'
-tags = ['written']
-[[markata.reader]]
-url='https://maggieappleton.com/rss.xml'
-author='Maggie Appleton'
-tags = ['written']
-# issues with date
-# [[markata.reader]]
-# url='https://www.christopherbiscardi.com/rss.xml'
-# author='Christopher Biscardi'
-# tags = ['written']
-[[markata.reader]]
-url='https://github.com/jbranchaud/til/commits/master.atom'
-author='jbranchaud'
-tags = ['written']
-[[markata.reader]]
-url='https://daringfireball.net/feeds/main'
-author='John Gruber'
-tags = ['written']
-[[markata.reader]]
-url='https://www.youtube.com/feeds/videos.xml?channel_id=UC2SvcdTaeU8qX1oxKNwIMnw'
-author='Ben Orenstein'
-tags = ['video']
-[[markata.reader]]
-url='https://www.youtube.com/feeds/videos.xml?channel_id=UCsjCKly4KtkvVyDjG_XkzEA'
-author='Joe Scotto'
-tags = ['video']
-[[markata.reader]]
-url='https://daniel.haxx.se/blog/feed/'
-author='Daniel Stenberg'
-tags = ['written']
-[[markata.reader]]
-url='https://micro.thomasbaart.nl/feed/'
-author='Thomas Baart'
-tags = ['written']
-[[markata.reader]]
-url='https://austencam.com/feed'
-author='Austin Cameron'
-tags = ['written']
-[[markata.reader]]
-url='https://www.youtube.com/feeds/videos.xml?channel_id=UCDAck-gFPTrgTx_qp59-bQA'
-author='Mischa van den Burg'
-tags = ['video']
-[[markata.reader]]
-url='https://www.youtube.com/feeds/videos.xml?channel_id=UCkK9UDm_ZNrq_rIXCz3xCGA'
-author='Bryan Lunduke'
-tags = ['video']
-[[markata.reader]]
-url='https://www.youtube.com/feeds/videos.xml?channel_id=UCJWAqA9DzA1bHwCd0TOUWsw'
-author='Late Night Linux Family'
-tags = ['video']
-[[markata.reader]]
-url='https://www.youtube.com/feeds/videos.xml?channel_id=UC6QNjBn6KMq5-pe3OE11zZg'
-author='Slant 3D'
-tags = ['video']
-[[markata.reader]]
-url='https://www.youtube.com/feeds/videos.xml?channel_id=UCHugE6eRhqB9_AZQh4DDbIw'
-author='Jupiter Broadcasting'
-tags = ['video']
-[[markata.reader]]
-author='FAFO.fm'
-tags = ['podcast']
-url='https://feeds.transistor.fm/fork-around-and-find-out'
-[[markata.reader]]
-author='makeitwork'
-tags = ['podcast']
-url='https://feeds.transistor.fm/makeitwork'
-[[markata.reader]]
-author='Cassidy Williams'
-tags = ['written']
-url='https://cassidoo.co/rss.xml'
-[[markata.reader]]
-author='Justin Garrison'
-tags = ['written']
-url='https://justingarrison.com/index.xml'
-[[markata.reader]]
-author='Trey Hunner'
-tags = ['written']
-url='https://treyhunner.com/atom.xml'
-[[markata.reader]]
-author='Jeff Triplett'
-tags = ['written']
-url='https://micro.webology.dev/feed.xml'
-[[markata.reader]]
-author='Matthias Ott'
-tags = ['written']
-url='https://matthiasott.com/feed'
-[[markata.reader]]
-author='ownyourweb'
-tags = ['written']
-url='https://buttondown.com/ownyourweb/rss'
-[[markata.reader]]
-author='CSS Wizardry'
-tags = ['written']
-url='https://csswizardry.com/feed.xml'
-[[markata.reader]]
-author='Bryan Hogan'
-tags = ['written']
-url='https://bryanhogan.com/rss.xml'
-[[markata.reader]]
-author='Brittany Ellich'
-tags = ['written']
-url='https://brittanyellich.com/index.xml'
-[[markata.reader]]
-author='Julia Evans'
-tags = ['written']
-url='https://jvns.ca/atom.xml'
-[[markata.reader]]
-author='Rock Paper Shotgun - Features'
-tags = ['written']
-url='https://www.rockpapershotgun.com/feed/features'
-[[markata.reader]]
-author='DJ Adams'
-tags = ['written']
-url='https://qmacro.org/feed.xml'
-[[markata.reader]]
-author='David Bushell'
-tags = ['written']
-url='https://dbushell.com/rss.xml'
-[[markata.reader]]
-author='David Bushell'
-tags = ['written']
-url='https://dbushell.com/notes/rss.xml'
-[[markata.reader]]
-author='Whitep4nth3r'
-tags = ['written']
-url='https://whitep4nth3r.com/feed.xml'
-[[markata.reader]]
-author='CSS Tricks'
-tags = ['written']
-url='https://css-tricks.com/feed/'
-[[markata.reader]]
-author='Will McGugan'
-tags = ['written']
-url='https://willmcgugan.github.io/feed'
 
 # markata feeds
 # creating pages of posts
@@ -574,3 +334,245 @@ config = { markata = "markata" }
 [markata.glob]
 glob_patterns = "docs/**/*.md,CHANGELOG.md"
 use_gitignore = true
+
+## Site Config
+url = "https://reader.waylonwalker.com"
+title = "Reader"
+description = "My personal rss reader."
+rss_description = "My personal rss reader."
+author_name = "Waylon Walker"
+author_email = "waylon@waylonwalaker.com"
+icon = "8bitcc.ico"
+lang = "en"
+repo_url = "https://github.com/waylonwalker/reader.waylonwalker.com"
+repo_branch = "main"
+theme_color = "#322D39"
+background_color = "#B73CF6"
+start_url = "/"
+site_name = "Waylon Walker's Reader"
+short_name = "reader"
+display = "minimal-ui"
+twitter_card = "summary_large_image"
+twitter_creator = "@_waylonwalker"
+twitter_site = "@_waylonwalker"
+
+[[markata.reader]]
+url = 'https://daverupert.com/atom.xml'
+author = 'David Rupert'
+tags = ['written']
+
+[[markata.reader]]
+url = 'https://joelhooks.com/rss.xml'
+author = 'Joel Hooks'
+tags = ['written']
+[[markata.reader]]
+url = 'https://swyx.io/rss.xml'
+author = 'Swyx'
+tags = ['written']
+[[markata.reader]]
+url = 'https://chriscoyier.net/feed/'
+author = 'Chris Coyier'
+tags = ['written']
+[[markata.reader]]
+url = 'https://mathspp.com/blog.rss'
+author = 'Rodrigo@mathsppblog'
+tags = ['written']
+[[markata.reader]]
+url = 'https://blog.jim-nielsen.com/feed.xml'
+author = 'Jim Nielsen'
+tags = ['written']
+[[markata.reader]]
+url = 'https://www.youtube.com/feeds/videos.xml?channel_id=UCyU5wkjgQYGRB0hIHMwm2Sg'
+author = 'Syntax.fm'
+tags = ['video']
+[[markata.reader]]
+url = 'https://www.youtube.com/feeds/videos.xml?channel_id=UCkbwOi_U5CBkevtlVhuzWnA'
+author = 'Backend Banter'
+tags = ['video']
+[[markata.reader]]
+url = 'https://blog.boot.dev/feed/'
+author = 'boot.dev'
+tags = ['written']
+[[markata.reader]]
+url = 'https://www.youtube.com/feeds/videos.xml?channel_id=UCUyeluBRhGPCW4rPe_UvBZQ'
+author = 'ThePrimeTime'
+tags = ['video']
+[[markata.reader]]
+url = 'https://jrs-s.net/feed/'
+author = 'Jim Salter'
+tags = ['written']
+[[markata.reader]]
+url = 'https://simonwillison.net/atom/everything/'
+author = 'Simon Willison'
+tags = ['written']
+limit = 50 # Simon has many small posts that get lost quickly
+[[markata.reader]]
+url = 'https://blakewatson.com/feed/'
+author = 'Blake Watson'
+tags = ['written']
+[[markata.reader]]
+url = 'https://blog.kubesimplify.com/rss.xml'
+author = 'KubeSimplify'
+tags = ['written']
+[[markata.reader]]
+url = 'https://kerkour.com/feed.xml'
+author = 'Sylvain Kerkour'
+tags = ['written']
+[[markata.reader]]
+url = 'https://www.youtube.com/feeds/videos.xml?channel_id=UCbRP3c757lWg9M-U7TyEkXA'
+author = 't3dotgg'
+tags = ['video']
+[[ markata.reader]]
+url = 'https://changelog.com/master/feed'
+author = 'Changelog'
+tags = ['podcast']
+[[markata.reader]]
+url = 'https://pythonbytes.fm/episodes/rss'
+author = 'PythonBytes'
+tags = ['podcast']
+[[markata.reader]]
+url='https://talkpython.fm/episodes/rss'
+author='TalkPython'
+tags = ['podcast']
+[[markata.reader]]
+url = 'https://feeds.transistor.fm/test-code-in-python'
+author = 'TestAndCode'
+tags = ['podcast']
+[[markata.reader]]
+url = 'https://vickiboykis.com/index.xml'
+author = 'Vicki Boykis'
+tags = ['written']
+[[markata.reader]]
+url='https://maggieappleton.com/rss.xml'
+author='Maggie Appleton'
+tags = ['written']
+# issues with date
+# [[markata.reader]]
+# url='https://www.christopherbiscardi.com/rss.xml'
+# author='Christopher Biscardi'
+# tags = ['written']
+[[markata.reader]]
+url='https://github.com/jbranchaud/til/commits/master.atom'
+author='jbranchaud'
+tags = ['written']
+[[markata.reader]]
+url='https://daringfireball.net/feeds/main'
+author='John Gruber'
+tags = ['written']
+[[markata.reader]]
+url='https://www.youtube.com/feeds/videos.xml?channel_id=UC2SvcdTaeU8qX1oxKNwIMnw'
+author='Ben Orenstein'
+tags = ['video']
+[[markata.reader]]
+url='https://www.youtube.com/feeds/videos.xml?channel_id=UCsjCKly4KtkvVyDjG_XkzEA'
+author='Joe Scotto'
+tags = ['video']
+[[markata.reader]]
+url='https://daniel.haxx.se/blog/feed/'
+author='Daniel Stenberg'
+tags = ['written']
+[[markata.reader]]
+url='https://micro.thomasbaart.nl/feed/'
+author='Thomas Baart'
+tags = ['written']
+[[markata.reader]]
+url='https://austencam.com/feed'
+author='Austin Cameron'
+tags = ['written']
+[[markata.reader]]
+url='https://www.youtube.com/feeds/videos.xml?channel_id=UCDAck-gFPTrgTx_qp59-bQA'
+author='Mischa van den Burg'
+tags = ['video']
+[[markata.reader]]
+url='https://www.youtube.com/feeds/videos.xml?channel_id=UCkK9UDm_ZNrq_rIXCz3xCGA'
+author='Bryan Lunduke'
+tags = ['video']
+[[markata.reader]]
+url='https://www.youtube.com/feeds/videos.xml?channel_id=UCJWAqA9DzA1bHwCd0TOUWsw'
+author='Late Night Linux Family'
+tags = ['video']
+[[markata.reader]]
+url='https://www.youtube.com/feeds/videos.xml?channel_id=UC6QNjBn6KMq5-pe3OE11zZg'
+author='Slant 3D'
+tags = ['video']
+[[markata.reader]]
+url='https://www.youtube.com/feeds/videos.xml?channel_id=UCHugE6eRhqB9_AZQh4DDbIw'
+author='Jupiter Broadcasting'
+tags = ['video']
+[[markata.reader]]
+author='FAFO.fm'
+tags = ['podcast']
+url='https://feeds.transistor.fm/fork-around-and-find-out'
+[[markata.reader]]
+author='makeitwork'
+tags = ['podcast']
+url='https://feeds.transistor.fm/makeitwork'
+[[markata.reader]]
+author='Cassidy Williams'
+tags = ['written']
+url='https://cassidoo.co/rss.xml'
+[[markata.reader]]
+author='Justin Garrison'
+tags = ['written']
+url='https://justingarrison.com/index.xml'
+[[markata.reader]]
+author='Trey Hunner'
+tags = ['written']
+url='https://treyhunner.com/atom.xml'
+[[markata.reader]]
+author='Jeff Triplett'
+tags = ['written']
+url='https://micro.webology.dev/feed.xml'
+[[markata.reader]]
+author='Matthias Ott'
+tags = ['written']
+url='https://matthiasott.com/feed'
+[[markata.reader]]
+author='ownyourweb'
+tags = ['written']
+url='https://buttondown.com/ownyourweb/rss'
+[[markata.reader]]
+author='CSS Wizardry'
+tags = ['written']
+url='https://csswizardry.com/feed.xml'
+[[markata.reader]]
+author='Bryan Hogan'
+tags = ['written']
+url='https://bryanhogan.com/rss.xml'
+[[markata.reader]]
+author='Brittany Ellich'
+tags = ['written']
+url='https://brittanyellich.com/index.xml'
+[[markata.reader]]
+author='Julia Evans'
+tags = ['written']
+url='https://jvns.ca/atom.xml'
+[[markata.reader]]
+author='Rock Paper Shotgun - Features'
+tags = ['written']
+url='https://www.rockpapershotgun.com/feed/features'
+[[markata.reader]]
+author='DJ Adams'
+tags = ['written']
+url='https://qmacro.org/feed.xml'
+[[markata.reader]]
+author='David Bushell'
+tags = ['written']
+url='https://dbushell.com/rss.xml'
+[[markata.reader]]
+author='David Bushell'
+tags = ['written']
+url='https://dbushell.com/notes/rss.xml'
+[[markata.reader]]
+author='Whitep4nth3r'
+tags = ['written']
+url='https://whitep4nth3r.com/feed.xml'
+[[markata.reader]]
+author='CSS Tricks'
+tags = ['written']
+url='https://css-tricks.com/feed/'
+[[markata.reader]]
+author='Will McGugan'
+tags = ['written']
+url='https://willmcgugan.github.io/feed'
+
