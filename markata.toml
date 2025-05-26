@@ -91,63 +91,65 @@ sort = 'date'
 reverse = true
 template='feed.html'
 card_template = "card.html"
+filter = "'main' in tags"
 
 [[markata.feeds]]
 slug = 'all'
 title = "Reader - All"
 sort = 'date'
 reverse = true
+filter = "'main' in tags"
 
 
 [[markata.feeds]]
 slug = 'video'
 title = "Reader - Video"
-filter = "'video' in post.tags"
 sort = 'date'
 reverse = true
+filter = "'main' in tags and 'video' in post.tags"
 
 [[markata.feeds]]
 slug = 'ten-video'
 title = "Reader - Video"
-filter = "'video' in post.tags"
 sort = 'date'
 partial_template = 'slim-card.html'
 reverse = true
 head = 10
+filter = "'main' in tags and 'video' in post.tags"
 
 
 [[markata.feeds]]
 slug = 'written'
 title = "Reader - Written"
-filter = "'written' in post.tags"
 sort = 'date'
 reverse = true
+filter = "'main' in tags and 'written' in post.tags"
 
 [[markata.feeds]]
 slug = 'ten-written'
 title = "Reader - Written"
-filter = "'written' in post.tags"
 sort = 'date'
 partial_template = 'slim-card.html'
 reverse = true
 head = 10
+filter = "'main' in tags and 'written' in post.tags"
 
 
 [[markata.feeds]]
 slug = 'podcast'
 title = "Reader - podcast"
-filter = "'podcast' in post.tags"
 sort = 'date'
 reverse = true
+filter = "'main' in tags and 'podcast' in post.tags"
 
 [[markata.feeds]]
 slug = 'ten-podcast'
 title = "Reader - podcast"
-filter = "'podcast' in post.tags"
 sort = 'date'
 partial_template = 'slim-card.html'
 reverse = true
 head = 10
+filter = "'main' in tags and 'podcast' in post.tags"
 
 [[markata.head.meta]]
 name = "twitter:title"
@@ -332,7 +334,7 @@ plugin = "markata.plugins.md_it_wikilinks:wikilinks_plugin"
 config = { markata = "markata" }
 
 [markata.glob]
-glob_patterns = "docs/**/*.md,CHANGELOG.md"
+glob_patterns = ""
 use_gitignore = true
 
 ## Site Config
@@ -548,7 +550,7 @@ author='Julia Evans'
 tags = ['written']
 url='https://jvns.ca/atom.xml'
 [[markata.reader]]
-author='Rock Paper Shotgun - Features'
+author='Rock Paper Shotgun Features'
 tags = ['written']
 url='https://www.rockpapershotgun.com/feed/features'
 [[markata.reader]]
@@ -575,4 +577,7 @@ url='https://css-tricks.com/feed/'
 author='Will McGugan'
 tags = ['written']
 url='https://willmcgugan.github.io/feed'
-
+[[markata.reader]]
+author='Joseph Thacker'
+tags = ['written']
+url='https://josephthacker.com/feed'
