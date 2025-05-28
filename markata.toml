@@ -594,10 +594,14 @@ author='Luke Plant'
 tags = ['written']
 url='https://lukeplant.me.uk/blog/categories/software-development.xml'
 [[markata.reader]]
-author='Max Bernstein'
+author='Max Bernstein' 
 tags = ['written']
 url='https://bernsteinbear.com/feed.xml'
 [[markata.reader]]
 author='Derek Kedziora'
 tags = ['written']
 url='https://derekkedziora.com/feed.xml'
+[[markata.reader]]
+author='Pype dot Dev'
+tags = ['written']
+url='https://pype.dev/all/rss.xml'
