@@ -581,3 +581,23 @@ url='https://willmcgugan.github.io/feed'
 author='Joseph Thacker'
 tags = ['written']
 url='https://josephthacker.com/feed'
+[[markata.reader]]
+author='Martin Heinz'
+tags = ['written']
+url='https://martinheinz.dev/rss'
+[[markata.reader]]
+author='Brett Cannon'
+tags = ['written']
+url='https://snarky.ca/rss/'
+[[markata.reader]]
+author='Luke Plant'
+tags = ['written']
+url='https://lukeplant.me.uk/blog/categories/software-development.xml'
+[[markata.reader]]
+author='Max Bernstein'
+tags = ['written']
+url='https://bernsteinbear.com/feed.xml'
+[[markata.reader]]
+author='Derek Kedziora'
+tags = ['written']
+url='https://derekkedziora.com/feed.xml'
