@@ -605,3 +605,7 @@ url='https://derekkedziora.com/feed.xml'
 author='Pype dot Dev'
 tags = ['written']
 url='https://pype.dev/all/rss.xml'
+[[markata.reader]]
+author='Selfhosted'
+tags = ['written']
+url='https://selfh.st/rss/'
