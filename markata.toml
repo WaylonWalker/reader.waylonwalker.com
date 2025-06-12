@@ -609,3 +609,7 @@ url='https://pype.dev/all/rss.xml'
 author='Selfhosted'
 tags = ['written']
 url='https://selfh.st/rss/'
+[[markata.reader]]
+author='Dan Abramov'
+url='https://overreacted.io/rss.xml'
+tags = ['written']

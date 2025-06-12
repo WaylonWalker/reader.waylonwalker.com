@@ -1,3 +1,7 @@
+## 0.6.14
+
+- add Dan Abramov
+
 ## 0.5.0
 
 - downgrade markata to 0.9.0
