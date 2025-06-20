@@ -1,3 +1,7 @@
+## 0.6.15
+
+- add jsx.lol
+
 ## 0.6.14
 
 - add Dan Abramov

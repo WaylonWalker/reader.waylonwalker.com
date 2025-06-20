@@ -613,3 +613,7 @@ url='https://selfh.st/rss/'
 author='Dan Abramov'
 url='https://overreacted.io/rss.xml'
 tags = ['written']
+[[markata.reader]]
+author='jsx.lol'
+url='https://jsx.lol/rss.xml'
+tags = ['written']
