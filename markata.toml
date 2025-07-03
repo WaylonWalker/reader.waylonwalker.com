@@ -617,3 +617,7 @@ tags = ['written']
 author='jsx.lol'
 url='https://jsx.lol/rss.xml'
 tags = ['written']
+[[markata.reader]]
+author='Dreams of Code'
+tags = ['written']
+url='https://blog.dreamsofcode.io/rss.xml'
