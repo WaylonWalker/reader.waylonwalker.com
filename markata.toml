@@ -621,3 +621,23 @@ tags = ['written']
 author='Dreams of Code'
 tags = ['written']
 url='https://blog.dreamsofcode.io/rss.xml'
+[[markata.reader]]
+author='Hammy Labs'
+url=https://hamy.xyz/blog/rss
+tags = ['written']
+[[markata.reader]]
+author='Justin Searls'
+tags=['written']
+url=https://justin.searls.co/atom.xml
+[[markata.reader]]
+author='David Heinemeier Hansson'
+tags=['written']
+url=https://world.hey.com/dhh/feed.atom
+[[markata.reader]]
+author='The Cynical Dev'
+tags=['written']
+url=https://thecynical.dev/index.xml
+[[markata.reader]]
+author='Daniel Roy Greenfeld'
+tags=['written']j
+url=https://daniel.feldroy.com/feeds/atom.xml

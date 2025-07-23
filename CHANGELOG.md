@@ -1,3 +1,7 @@
+## 0.6.17
+
+- add Hammy Labs, Justin Searls, DHH, The Cynical Dev, pydanny
+
 ## 0.6.16
 
 - add Dreams of Code
