@@ -1,3 +1,8 @@
+## 0.6.18
+
+- add Tonsky
+- bump markata and fix toml
+
 ## 0.6.17
 
 - add Hammy Labs, Justin Searls, DHH, The Cynical Dev, pydanny
