@@ -41,11 +41,11 @@ hooks = [
     # "markata.plugins.publish_html",
     # "default",
 ]
-# disabled_hooks = [
+disabled_hooks = [
 #     "markata.plugins.heading_link",
 #     "markata.plugins.pyinstrument",
-#     "markata.plugins.glob",
-#     "markata.plugins.load",
+    "markata.plugins.glob",
+    "markata.plugins.load",
 #     "markata.plugins.auto_title",
 #     "markata.plugins.render_markdown",
 #     "markata.plugins.manifest",
@@ -62,7 +62,7 @@ hooks = [
 #     "markata.plugins.to_json",
 #     "markata.plugins.redirects",
 #     "markata.plugins.jinja_md",
-# ]
+]
 #
 
 # markata feeds
@@ -80,9 +80,9 @@ hooks = [
 # card_template="""
 # """
 
-template='feed.html'
+# template='feed.html'
 title = "Reader"
-card_template = "card.html"
+# card_template = "card.html"
 
 [[markata.feeds]]
 slug = 'archive'
@@ -623,21 +623,29 @@ tags = ['written']
 url='https://blog.dreamsofcode.io/rss.xml'
 [[markata.reader]]
 author='Hammy Labs'
-url=https://hamy.xyz/blog/rss
+url='https://hamy.xyz/blog/rss'
 tags = ['written']
 [[markata.reader]]
 author='Justin Searls'
 tags=['written']
-url=https://justin.searls.co/atom.xml
+url='https://justin.searls.co/atom.xml'
 [[markata.reader]]
 author='David Heinemeier Hansson'
 tags=['written']
-url=https://world.hey.com/dhh/feed.atom
+url='https://world.hey.com/dhh/feed.atom'
 [[markata.reader]]
 author='The Cynical Dev'
 tags=['written']
-url=https://thecynical.dev/index.xml
+url='https://thecynical.dev/index.xml'
 [[markata.reader]]
 author='Daniel Roy Greenfeld'
-tags=['written']j
-url=https://daniel.feldroy.com/feeds/atom.xml
+tags=['written']
+url='https://daniel.feldroy.com/feeds/atom.xml'
+[[markata.reader]]
+author='End Times'
+tags=['written']
+url='https://endtimes.dev/feed.xml'
+[[markata.reader]]
+author='Niki Tonsky'
+tags=['written']
+url='https://tonsky.me/atom.xml'
