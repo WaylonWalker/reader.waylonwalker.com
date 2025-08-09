@@ -1,3 +1,7 @@
+## 0.6.19
+
+- add miriamsuzanne
+
 ## 0.6.18
 
 - add Tonsky

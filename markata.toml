@@ -649,3 +649,7 @@ url='https://endtimes.dev/feed.xml'
 author='Niki Tonsky'
 tags=['written']
 url='https://tonsky.me/atom.xml'
+[[markata.reader]]
+author='Miriam Suzanne'
+tags=['written']
+url='https://www.miriamsuzanne.com/feed.xml'
