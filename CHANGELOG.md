@@ -1,3 +1,9 @@
+## 0.6.20
+
+- add Simon Spati
+- add Sean Goedecke
+- add Sam Texas
+
 ## 0.6.19
 
 - add miriamsuzanne

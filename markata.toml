@@ -653,3 +653,15 @@ url='https://tonsky.me/atom.xml'
 author='Miriam Suzanne'
 tags=['written']
 url='https://www.miriamsuzanne.com/feed.xml'
+[[markata.reader]]
+author='Simon Späti'
+tags=['written']
+url='https://www.ssp.sh/index.xml'
+[[markata.reader]]
+author='Sean Goedecke'
+tags=['written']
+url='https://www.seangoedecke.com/rss.xml'
+[[markata.reader]]
+author='Sam Texas'
+tags=['written']
+url='https://simplecto.com/rss/'
