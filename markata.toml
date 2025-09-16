@@ -665,3 +665,31 @@ url='https://www.seangoedecke.com/rss.xml'
 author='Sam Texas'
 tags=['written']
 url='https://simplecto.com/rss/'
+[[markata.reader]]
+author='Eric Bailey'
+tags=['written']
+url='https://ericwbailey.website/feed/feed.xml'
+[[markata.reader]]
+author='Nick Nisi'
+tags=['written']
+url='https://nicknisi.com/rss.xml'
+[[markata.reader]]
+author='CultRepo'
+tags=['video']
+url='https://www.youtube.com/feeds/videos.xml?channel_id=UCsUalyRg43M8D60mtHe6YcA'
+[[markata.reader]]
+author='Fabien Rica'
+tags=['written']
+url="https://frica.github.io/blog/feeds/all.atom.xml"
+[[markata.reader]]
+author='Terminal Trove Blog'
+tags=['written']
+url='https://terminaltrove.com/blog.xml'
+[[markata.reader]]
+author='Terminal Tool of the Week'
+tags=['written']
+url='https://terminaltrove.com/totw.xml'
+[[markata.reader]]
+author='Jesse Leite'
+tags=['written']
+url='https://jesseleite.com/feed'

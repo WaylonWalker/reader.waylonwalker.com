@@ -1,3 +1,9 @@
+## 0.6.21
+
+- add new feeds
+- Jesse Leite
+- Nick Nisi
+
 ## 0.6.20
 
 - add Simon Spati
