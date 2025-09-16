@@ -479,7 +479,7 @@ author='Thomas Baart'
 tags = ['written']
 [[markata.reader]]
 url='https://austencam.com/feed'
-author='Austin Cameron'
+author='Austen Cameron'
 tags = ['written']
 [[markata.reader]]
 url='https://www.youtube.com/feeds/videos.xml?channel_id=UCDAck-gFPTrgTx_qp59-bQA'
@@ -693,3 +693,7 @@ url='https://terminaltrove.com/totw.xml'
 author='Jesse Leite'
 tags=['written']
 url='https://jesseleite.com/feed'
+[[markata.reader]]
+author='Jesse Leite and Austen Cameron'
+tags=['audio']
+url='https://feeds.transistor.fm/campfire-coders'
