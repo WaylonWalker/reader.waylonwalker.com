@@ -701,3 +701,7 @@ url='https://feeds.transistor.fm/campfire-coders'
 author='Adam Whitthauer'
 tags=['written']
 url='https://www.bigwengineering.com/blog-feed.xml'
+[[markata.reader]]
+author='Ladybug Podcast'
+tags=['audio']
+url='https://www.ladybug.dev/episodes?format=rss'

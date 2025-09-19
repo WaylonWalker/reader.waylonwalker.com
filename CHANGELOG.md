@@ -1,3 +1,7 @@
+## 0.6.24
+
+- add ladybug podcast
+
 ## 0.6.23
 
 - add Adam Whitthauer
