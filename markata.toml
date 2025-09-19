@@ -697,3 +697,7 @@ url='https://jesseleite.com/feed'
 author='Jesse Leite and Austen Cameron'
 tags=['audio']
 url='https://feeds.transistor.fm/campfire-coders'
+[[markata.reader]]
+author='Adam Whitthauer'
+tags=['written']
+url='https://www.bigwengineering.com/blog-feed.xml'

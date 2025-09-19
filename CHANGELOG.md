@@ -1,3 +1,7 @@
+## 0.6.23
+
+- add Adam Whitthauer
+
 ## 0.6.22
 
 - add Campfire Coders
