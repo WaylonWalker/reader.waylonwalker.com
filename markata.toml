@@ -705,3 +705,7 @@ url='https://www.bigwengineering.com/blog-feed.xml'
 author='Ladybug Podcast'
 tags=['audio']
 url='https://www.ladybug.dev/episodes?format=rss'
+[[markata.reader]]
+author='Kenny Reitz'
+tags=['written']
+url='https://kennethreitz.org/feed.xml'

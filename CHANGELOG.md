@@ -1,3 +1,7 @@
+## 0.6.25
+
+- add Kenneth Reitz
+
 ## 0.6.24
 
 - add ladybug podcast
