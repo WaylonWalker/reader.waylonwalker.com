@@ -706,6 +706,14 @@ author='Ladybug Podcast'
 tags=['audio']
 url='https://www.ladybug.dev/episodes?format=rss'
 [[markata.reader]]
-author='Kenny Reitz'
+author='Kenneth Reitz'
 tags=['written']
 url='https://kennethreitz.org/feed.xml'
+[[markata.reader]]
+author='Annie Mueller'
+tags=['written']
+url='https://anniemueller.com/posts_feed'
+[[markata.reader]]
+author='Maurycyz'
+tags=['written']
+url='https://maurycyz.com/index.xml'
