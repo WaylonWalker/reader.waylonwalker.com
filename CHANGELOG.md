@@ -1,3 +1,16 @@
+## 0.6.28
+
+- add Preston Thorpe
+- add git pull to entrypoint
+
+## 0.6.27
+
+- add Maurycyz
+
+## 0.6.26
+
+- add Annie Mueller
+
 ## 0.6.25
 
 - add Kenneth Reitz

@@ -717,3 +717,7 @@ url='https://anniemueller.com/posts_feed'
 author='Maurycyz'
 tags=['written']
 url='https://maurycyz.com/index.xml'
+[[markata.reader]]
+author='Preston Thorpe'
+tags=['written']
+url='https://pthorpe92.dev/rss'
