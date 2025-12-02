@@ -485,10 +485,10 @@ tags = ['written']
 url='https://www.youtube.com/feeds/videos.xml?channel_id=UCDAck-gFPTrgTx_qp59-bQA'
 author='Mischa van den Burg'
 tags = ['video']
-[[markata.reader]]
-url='https://www.youtube.com/feeds/videos.xml?channel_id=UCkK9UDm_ZNrq_rIXCz3xCGA'
-author='Bryan Lunduke'
-tags = ['video']
+# [[markata.reader]]
+# url='https://www.youtube.com/feeds/videos.xml?channel_id=UCkK9UDm_ZNrq_rIXCz3xCGA'
+# author='Bryan Lunduke'
+# tags = ['video']
 [[markata.reader]]
 url='https://www.youtube.com/feeds/videos.xml?channel_id=UCJWAqA9DzA1bHwCd0TOUWsw'
 author='Late Night Linux Family'
