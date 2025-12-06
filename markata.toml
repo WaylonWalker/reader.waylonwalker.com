@@ -721,3 +721,7 @@ url='https://maurycyz.com/index.xml'
 author='Preston Thorpe'
 tags=['written']
 url='https://pthorpe92.dev/rss'
+[[markata.reader]]
+author='Zach Leatherman'
+tags=['written']
+url='https://www.zachleat.com/web/feed/'
