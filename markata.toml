@@ -725,3 +725,7 @@ url='https://pthorpe92.dev/rss'
 author='Zach Leatherman'
 tags=['written']
 url='https://www.zachleat.com/web/feed/'
+[[markata.reader]]
+author='Daniel Miessler'
+tags=['written']
+url='https://danielmiessler.com/feed.rss'
