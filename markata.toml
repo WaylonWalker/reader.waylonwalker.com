@@ -741,3 +741,7 @@ url='https://henry.codes/rss/reading-list.xml'
 author='Joan Westenberg'
 tags=['written']
 url='https://www.joanwestenberg.com/rss/'
+[[markata.reader]]
+author='Steph Ango'
+tags=['written']
+url='https://stephango.com/feed.xml'
