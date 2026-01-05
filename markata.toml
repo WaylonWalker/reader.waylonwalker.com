@@ -737,3 +737,7 @@ url='https://henry.codes/rss/writing.xml'
 author='Henry (From Online) - Reading List'
 tags=['written']
 url='https://henry.codes/rss/reading-list.xml'
+[[markata.reader]]
+author='Joan Westenberg'
+tags=['written']
+url='https://www.joanwestenberg.com/rss/'
