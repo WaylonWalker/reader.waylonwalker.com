@@ -729,3 +729,11 @@ url='https://www.zachleat.com/web/feed/'
 author='Daniel Miessler'
 tags=['written']
 url='https://danielmiessler.com/feed.rss'
+[[markata.reader]]
+author='Henry (From Online)'
+tags=['written']
+url='https://henry.codes/rss/writing.xml'
+[[markata.reader]]
+author='Henry (From Online) - Reading List'
+tags=['written']
+url='https://henry.codes/rss/reading-list.xml'
