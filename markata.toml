@@ -745,3 +745,7 @@ url='https://www.joanwestenberg.com/rss/'
 author='Steph Ango'
 tags=['written']
 url='https://stephango.com/feed.xml'
+[[markata.reader]]
+author='Sophie'
+tags=['written']
+url='https://localghost.dev/feed.xml'
