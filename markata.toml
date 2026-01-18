@@ -749,3 +749,11 @@ url='https://stephango.com/feed.xml'
 author='Sophie'
 tags=['written']
 url='https://localghost.dev/feed.xml'
+[[markata.reader]]
+author='Armin Ronacher'
+tags=['written']
+url='https://lucumr.pocoo.org/feed.xml'
+[[markata.reader]]
+author='Peter Steinberger'
+tags=['written']
+url='https://steipete.me/rss.xml'
